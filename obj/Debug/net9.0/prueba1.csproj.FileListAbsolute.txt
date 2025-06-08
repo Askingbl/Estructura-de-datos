@@ -12,3 +12,4 @@ C:\Users\askin\Documents\proyectos\prueba1\obj\Debug\net9.0\refint\prueba1.dll
 C:\Users\askin\Documents\proyectos\prueba1\obj\Debug\net9.0\prueba1.pdb
 C:\Users\askin\Documents\proyectos\prueba1\obj\Debug\net9.0\prueba1.genruntimeconfig.cache
 C:\Users\askin\Documents\proyectos\prueba1\obj\Debug\net9.0\ref\prueba1.dll
+C:\Users\askin\Documents\proyectos\prueba1\obj\Debug\net9.0\prueba1.sourcelink.json
