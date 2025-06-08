@@ -8,3 +8,6 @@
   </PropertyGroup>
 
 </Project>
+<ItemGroup>
+  <Compile Include="Clases\trabajo.cs" />
+</ItemGroup>
