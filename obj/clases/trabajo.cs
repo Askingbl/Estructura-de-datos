@@ -1,17 +1,6 @@
-using System;
-
-namespace FigurasGeometricas
-{
-    // Clase para representar un Círculo
-    public class Circulo
-    {
-        // Atributo privado que almacena el radio del círculo (encapsulamiento)
         private double radio;
 
         // Constructor que inicializa el radio del círculo
-        public Circulo(double radio)
-        {
-            this.radio = radio;
         }
 
         // Método que devuelve el área del círculo
