@@ -2,10 +2,10 @@ using System;
 
 namespace FigurasGeometricas
 {
-    // Clase para representar un Círculo
+    // Clase Circulo que encapsula el radio de un círculo
     public class Circulo
     {
-        // Atributo privado que almacena el radio del círculo (encapsulamiento)
+        // Campo privado que almacena el radio del círculo
         private double radio;
 
         // Constructor que inicializa el radio del círculo
@@ -14,64 +14,71 @@ namespace FigurasGeometricas
             this.radio = radio;
         }
 
-        // Método que devuelve el área del círculo
-        // CalcularArea es una función que devuelve un valor double, se utiliza para calcular el área de un círculo, requiere como argumento el radio
+        // CalcularArea es una función que devuelve un valor double
+        // Se utiliza para calcular el área de un círculo
         public double CalcularArea()
         {
             return Math.PI * radio * radio;
         }
 
-        // Método que devuelve el perímetro (circunferencia) del círculo
-        // CalcularPerimetro es una función que devuelve un valor double, se utiliza para calcular el perímetro de un círculo, requiere como argumento el radio
+        // CalcularPerimetro es una función que devuelve un valor double
+        // Se utiliza para calcular el perímetro (circunferencia) de un círculo
         public double CalcularPerimetro()
         {
             return 2 * Math.PI * radio;
         }
     }
 
-    // Clase para representar un Rectángulo
+    // Clase Rectangulo que encapsula el ancho y alto de un rectángulo
     public class Rectangulo
     {
-        // Atributos privados que almacenan la base y la altura del rectángulo (encapsulamiento)
-        private double baseRectangulo;
-        private double altura;
+        // Campos privados que almacenan el ancho y alto del rectángulo
+        private double ancho;
+        private double alto;
 
-        // Constructor que inicializa la base y la altura del rectángulo
-        public Rectangulo(double baseRectangulo, double altura)
+        // Constructor que inicializa el ancho y alto del rectángulo
+        public Rectangulo(double ancho, double alto)
         {
-            this.baseRectangulo = baseRectangulo;
-            this.altura = altura;
+            this.ancho = ancho;
+            this.alto = alto;
         }
 
-        // Método que devuelve el área del rectángulo
-        // CalcularArea es una función que devuelve un valor double, se utiliza para calcular el área de un rectángulo, requiere como argumentos la base y la altura
+        // CalcularArea es una función que devuelve un valor double
+        // Se utiliza para calcular el área de un rectángulo
         public double CalcularArea()
         {
-            return baseRectangulo * altura;
+            return ancho * alto;
         }
 
-        // Método que devuelve el perímetro del rectángulo
-        // CalcularPerimetro es una función que devuelve un valor double, se utiliza para calcular el perímetro de un rectángulo, requiere como argumentos la base y la altura
+        // CalcularPerimetro es una función que devuelve un valor double
+        // Se utiliza para calcular el perímetro de un rectángulo
         public double CalcularPerimetro()
         {
-            return 2 * (baseRectangulo + altura);
+            return 2 * (ancho + alto);
         }
     }
 
-    // Programa principal para probar las clases
+    // Clase principal Program que contiene el método Main para ejecutar el programa
     class Program
     {
         static void Main(string[] args)
         {
-            // Crear un círculo con radio 5.0
-            Circulo miCirculo = new Circulo(5.0);
-            Console.WriteLine("Área del círculo: " + miCirculo.CalcularArea());
-            Console.WriteLine("Perímetro del círculo: " + miCirculo.CalcularPerimetro());
+            // Crear un objeto Circulo con radio 5
+            Circulo miCirculo = new Circulo(5);
 
-            // Crear un rectángulo con base 4.0 y altura 6.0
-            Rectangulo miRectangulo = new Rectangulo(4.0, 6.0);
-            Console.WriteLine("Área del rectángulo: " + miRectangulo.CalcularArea());
-            Console.WriteLine("Perímetro del rectángulo: " + miRectangulo.CalcularPerimetro());
+            Console.WriteLine("Círculo:");
+            Console.WriteLine($"Área: {miCirculo.CalcularArea()}");
+            Console.WriteLine($"Perímetro: {miCirculo.CalcularPerimetro()}");
+
+            // Crear un objeto Rectangulo con ancho 4 y alto 3
+            Rectangulo miRectangulo = new Rectangulo(4, 3);
+
+            Console.WriteLine("\nRectángulo:");
+            Console.WriteLine($"Área: {miRectangulo.CalcularArea()}");
+            Console.WriteLine($"Perímetro: {miRectangulo.CalcularPerimetro()}");
+
+            // Esperar a que el usuario presione una tecla para cerrar la consola
+            Console.ReadKey();
         }
     }
 }
